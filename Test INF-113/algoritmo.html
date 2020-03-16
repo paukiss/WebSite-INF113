@@ -1,0 +1,228 @@
+<!doctype html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>El Hombre que Calculaba</title>
+
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/estilo.css">
+	
+
+	<link href='http://fonts.googleapis.com/css?family=Gochi+Hand' rel='stylesheet' type='text/css'>
+
+	<link href="h.png" type="image/x-icon" rel="shortcut icon" />
+
+	<script src="js/modernizr.custom.31855.js"></script>
+</head>
+<body>
+	<header>
+		<figure><img src="logo.jpg" alt="" /></figure>
+		<h1>EL HOMBRE QUE CALCULABA</h1>
+		<nav>
+			<ul>
+				<li><a href="#">CAPITULO X</a></li>
+				
+			</ul>
+		</nav>
+		<nav class="seleccion">
+			<ul>
+			<a href="index.html">Inicio</a>
+			<a href="resumen.html">Resumen</a>
+			<a href="algoritmo.html">Algoritmo</a>
+			<a href="diagram.html">Diagrama de flujo</a>
+			<a href="inicio.html">Contactos</a>
+			</ul>
+		</nav>
+	</header>
+
+	
+
+	
+		
+			
+	<section>
+		
+
+		
+		<div class="news">
+			<h2>Numeros Perfectos</h2>
+			<article class="post">
+				<figure><img src="46.gif" alt=""></figure>
+				<h3></h3>
+				<p>Un número perfecto es un número natural que es igual a la suma de sus divisores propios positivos. Dicho de otra forma, un número perfecto es aquel que es amigo de sí mismo. Así, 6 es un número perfecto porque sus divisores propios son 1, 2 y 3; y 6 = 1 + 2 + 3. Los siguientes números perfectos son 28, 496 y 8128.</p>
+				<video controls class="video-filter" id="video">
+					<source src="numero.mp4" video/mp4; codecs="avc.h264,avc.42E01E,mp4a.40.2"/>
+				</video>
+					
+		<br>
+		
+		<br>
+		
+
+		<div>
+		<h1 class="formulario__titulo">Numeros Perfectos</h1>
+		<form action="">Intro n para saber el numeros perfecto mas cerca de n</form>
+		<input type="text" id="num1" class="formulario__input">
+		<label for="num1" class="formulario__label">Numero 1</label>
+		<form action="">Intro un numero para verificar si es perfecto</form>
+		<input type="text" id="num2" class="formulario__input">
+		<label for="num2" class="formulario__label">Numero 2</label>
+		
+		<button id="btn" class="formulario__submit">Enviar</button>
+		
+	</div>
+
+	<input type="text" id="n" class="formulario__input" >
+	<input type="text" id="m" class="formulario__input" >
+
+	<script src="form.js"></script>
+	<script>
+		function perfect(m){
+			var i,j,s;
+			
+			for(var i=1; i<=m;i++){
+				var s=0;
+				for(var j=1; j<i;j++){
+					if(i%j==0){
+						s=s+j;
+					}
+				}
+				if(i==s){
+					var t = i+" Es un numero perfecto";
+				}
+			}
+			return t;
+		}
+	function siono(n){
+			var s=0;
+		
+			for(var i=1; i<n; i++){
+				if(n%i==0){
+					s=s+i;
+				}
+			}
+			if(s==n){
+				var t = n+" Si es perfecto"
+
+			}else{
+				var t = n+" No es perfecto"
+			}
+			return t;
+		}
+	function Enviar()
+	{
+		var a =	parseInt(document.getElementById("num1").value);
+		var b = parseInt(document.getElementById("num2").value);
+		var n = perfect(a)
+		var m = siono(b)
+		console.log(n)
+		console.log(m)
+		document.getElementById("n").value=n
+		document.getElementById("m").value=m
+	}
+
+	document.getElementById("btn").addEventListener("click",Enviar)
+
+
+	</script>
+
+
+		
+
+		
+			</article>
+
+			
+
+		</div>
+
+		
+		
+		<article class="receta postre">
+		
+			<figure><img src="reloj.gif" alt=""></figure>
+			<span class="tipo">NUMEROS</span>
+			<h2>Numeros Perfectos</h2>
+			<p>Número perfecto, explicó Beremiz, es el que presenta la propiedad de ser igual a la suma de sus divisores, excluyéndose claro está, de entre ellos el propio número.<br/>
+
+			Así, por ejemplo, el número 28 presenta 5 divisores menores que 28:<br/>
+
+			1, 2, 4, 7, 14<br/>
+
+			La suma de esos divisores:<br/>
+
+			1 + 2 + 4 + 7 + 14<br/>
+
+			es precisamente igual a 28. Luego 28 pertenece a la categoría de los números perfectos.<br/>
+
+			El número 6 también es perfecto. Los divisores de 6 —menores de 6— son:<br/>
+
+			1, 2 y 3<br/>
+
+			cuya suma es 6.<br/>
+
+			Al lado del 6 y del 28 puede figurar el 496 que es también, como ya dije, un número perfecto.<br/>
+			El matemático Euclides descubrió que los cuatro primeros números perfectos vienen dados por la<br/> fórmula:<br/>
+
+n = 2:   21 × (22 – 1) = 6<br/>
+n = 3:   22 × (23 – 1) = 28<br/>
+n = 5:   24 × (25 – 1) = 496<br/>
+n = 7:   26 × (27 – 1) = 8128<br/>
+		</p>
+			
+
+		</article>
+	<article class="receta postre">
+		
+			<figure><img src="cerebro.gif" alt=""></figure>
+			<span class="tipo">NUMEROS</span>
+			<h2>Numeros Perfectos</h2>
+			<p>
+				Un número perfecto es un número natural que es igual a la suma de sus divisores propios positivos. Dicho de otra forma, un número perfecto es aquel que es amigo de sí mismo.<br/>
+
+				Así, 6 es un número perfecto porque sus divisores propios son 1, 2 y 3; y 6 = 1 + 2 + 3. Los siguientes números perfectos son 28, 496 y 8128.<br/>
+
+				&nbsp;&nbsp;&nbsp;28 = 1 + 2 + 4 + 7 + 14<br/>
+				&nbsp;&nbsp;&nbsp;496 = 1 + 2 + 4 + 8 + 16 + 31 + 62 + 124 + 248<br/>
+				&nbsp;&nbsp;&nbsp;8128 = 1 + 2 + 4 + 8 + 16 + 32 + 64 + 127 + 254 + 508 + 1016 + 2032 + 4064<br/>
+		</p>
+			
+		<div>
+				<span><strong>Ejemplo de Numeros Perfectos	</strong></span>
+				<ul>
+					<li>6</li>
+					<li>28</li>
+					<li>496</li>
+					<li>5512</li>
+					
+				</ul>
+			</div>
+
+		</article>
+	
+
+		
+
+		
+	</section>
+
+	
+	<footer>
+		<span>Creado por @Sergio P</span>
+
+	</footer>
+
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js' type='text/javascript'> </script>
+<script type="text/javascript">//<![CDATA[
+		$(function(){
+		    $('#slider div:gt(0)').hide();
+		    setInterval(function(){
+		      $('#slider div:first-child').fadeOut(0)
+		         .next('div').fadeIn(1000)
+		         .end().appendTo('#slider');}, 5000);
+		});
+	//]]></script>
+
+</body>
+</html>
+
